@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { ParentDataComponent } from './child-to-parent/parent-data/parent-data.component';
-import { ChildDataComponent } from './child-to-parent/child-data/child-data.component';
 import { DataBindComponent } from './data-binding.component';
 import { ChildToParentModule } from './child-to-parent/child-to-parent.module';
 import { ParentInfoComponent } from './parent-to-child/parent-info/parent-info.component';
 import { ParentToChildModule } from './parent-to-child/parent-to-child.module';
+import { ParentDetectComponent } from './detect-changes/parent-detect/parent-detect.component';
+import { DetectChangesModule } from './detect-changes/detect-changes.module';
 const routes: Routes = [
   {
     path: '', component: DataBindComponent, children: [
@@ -15,6 +16,9 @@ const routes: Routes = [
       },
       {
         path: 'parentToChild', component: ParentInfoComponent
+      },
+      {
+        path: 'detectChanges', component: ParentDetectComponent
       }
     ]
   }
@@ -28,7 +32,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     CommonModule,
     ChildToParentModule,
-    ParentToChildModule
+    ParentToChildModule,
+    DetectChangesModule
   ],
   exports: [RouterModule]
 

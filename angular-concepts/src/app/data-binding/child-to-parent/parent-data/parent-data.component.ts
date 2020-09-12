@@ -20,4 +20,12 @@ export class ParentDataComponent implements OnInit {
     this.person = this.personData;
   }
 
+  changePersonData(): void {
+    this.person = {
+      name: 'Jack',
+      city: 'USA',
+      phone: 9793874000
+    }
+  }
+
 }

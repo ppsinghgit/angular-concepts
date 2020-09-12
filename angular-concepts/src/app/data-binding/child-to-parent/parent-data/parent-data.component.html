@@ -1,1 +1,12 @@
-<app-child-data [personDetails]="person" [departmentName]="departmentName"></app-child-data>
+<app-child-data #test [personDetails]="person" [departmentName]="departmentName"></app-child-data>
+<div class="row">
+    <div class="col-12">
+        <button class="btn btn-primary" (click)="changePersonData()">Change Person Data</button>
+    </div>
+</div>
+
+<hr />
+<h4>This is section is to demonstrate the # reference variable working</h4>
+<p>The button is showing the below calls the method of child component using #child reference variable</p>
+
+<button class="btn btn-success" (click)="test.updatePersonInfoFromChild()">Test</button>

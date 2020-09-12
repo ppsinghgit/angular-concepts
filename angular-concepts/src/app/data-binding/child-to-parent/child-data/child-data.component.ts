@@ -14,4 +14,8 @@ export class ChildDataComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  updatePersonInfoFromChild(): void {
+    alert('This is the method of child component. This is created to demostrated the # reference variable.');
+  }
+
 }

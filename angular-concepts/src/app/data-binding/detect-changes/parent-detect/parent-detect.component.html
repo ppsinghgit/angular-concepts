@@ -1,0 +1,9 @@
+<hr />
+<h4>Demo of OnChange interface implementation in child component</h4>
+<div class="row">
+    <div class="col-12">
+        <p><strong>Total Count: </strong>{{count}}</p>
+        <button (click)="changeValue()">Add One</button>
+    </div>
+</div>
+<app-child-detect [count]="count"></app-child-detect>
