@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "angular-concepts"
+  "defaultProject": "angular-concepts",
+  "cli": {
+    "analytics": false
+  }
 }
