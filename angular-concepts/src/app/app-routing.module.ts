@@ -3,6 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '', redirectTo: 'databinding', pathMatch: 'full'
+
+  },
+  {
     path: 'databinding',
     loadChildren: () => import('./data-binding/data-binding.module').then(m => m.DataBindingModule)
   },
